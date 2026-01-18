@@ -1,6 +1,6 @@
 import requests
 
-# Import NASA API data for NEOS over a 7-day period
+# Import NASA API data for NEOS over 7 days
 API_KEY = "DL3MLvqyEUJYDb358C256UXvEx3Gh6JHNF1gmCeU"
 url = "https://api.nasa.gov/neo/rest/v1/feed"
 
@@ -20,7 +20,7 @@ neos_dated = data["near_earth_objects"]
 clean_data = []
 
 # Iterates through each asteroid entry in the file,
-# stores relevant data in empty list 'clean_data'
+# stores relevant data in empty list 'clean_data.'
 for date, asteroid_list in neos_dated.items():
     for asteroid in asteroid_list:
 
@@ -37,5 +37,8 @@ for date, asteroid_list in neos_dated.items():
             "hazardous": asteroid["is_potentially_hazardous_asteroid"],
             "close_approach_date": approach["close_approach_date"],
         })
+
+
+
 
 
